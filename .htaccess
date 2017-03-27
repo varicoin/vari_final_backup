@@ -1,0 +1,10 @@
+# Options +FollowSymlinks 
+#RewriteEngine On 
+#RewriteCond %{http_host} ^(www\.)?vari\.co.in [NC] 
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://www.vari.co.in/site.php [R=permanent,L]
+
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.vari.co.in/$1 [R,L]
